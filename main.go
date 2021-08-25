@@ -63,7 +63,7 @@ func login(serviceUrl string, studentID string, passwd string) *http.Client {
 	postDict["execution"] = "e1s1"
 	postDict["_eventId"] = "submit"
 
-	var postValues url.Values
+	postValues := url.Values{}
 
 	for postKey, PostValue := range postDict {
 		postValues.Set(postKey, PostValue)
